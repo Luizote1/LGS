@@ -1,0 +1,38 @@
+{
+  "name": "lgs",
+  "version": "1.0.0",
+  "description": "Site da minha Empresa",
+  "keywords": [
+    "nodejs",
+    "express",
+    "mvc",
+    "ejs",
+    "javascript",
+    "frontend",
+    "backend",
+    "website",
+    "responsive",
+    "bootstrap"
+  ],
+  "author": "Luiz Gustavo Sa da Silva",
+  "license": "ISC",
+  "type": "commonjs",
+  "main": "server.js",
+
+  "scripts": {
+    "start": "node server.js"
+  },
+
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "express-ejs-layouts": "^2.5.1",
+    "multer": "^2.1.1",
+    "mysql2": "^3.22.3"
+  },
+
+  "engines": {
+    "node": "22.x"
+  }
+}

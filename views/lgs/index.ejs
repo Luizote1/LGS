@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGS | Software House</title>
+    <link rel="icon" href="/img/logo/logo.png">
+    <link rel="stylesheet" href="/css/lgs.css">
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+
+    <header class="navbar">
+        <a href="/" class="brand">
+            <img src="/img/logo/logo.png" alt="LGS">
+            <div>
+                <strong>LGS</strong>
+                <span>Software House</span>
+            </div>
+        </a>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a href="#contato" class="nav-btn">Solicitar projeto</a>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="hero-text reveal">
+                <span class="tag">WEBSITES • SISTEMAS • AUTOMAÇÕES</span>
+
+                <h1>
+                    Criamos sistemas que resolvem problemas reais.
+                </h1>
+
+                <p>
+                    A LGS desenvolve sites, sistemas web, dashboards, e-commerces e plataformas
+                    personalizadas com visual moderno, performance e estrutura profissional.
+                </p>
+
+                <div class="buttons">
+                    <a href="#projetos" class="btn white">Ver projetos</a>
+                    <a href="#demo" class="btn dark">Assistir demo</a>
+                </div>
+
+                <div class="numbers">
+                    <div>
+                        <strong>+10</strong>
+                        <span>Telas criadas</span>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <span>Responsivo</span>
+                    </div>
+
+                    <div>
+                        <strong>MVC</strong>
+                        <span>Arquitetura</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-preview reveal">
+                <div class="browser">
+                    <div class="browser-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="screen">
+                        <div class="dash-sidebar"></div>
+                        <div class="dash-main">
+                            <div class="dash-line"></div>
+                            <div class="dash-cards">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="dash-table"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="float-card card-one">
+                    <strong>Dashboard</strong>
+                    <span>Online</span>
+                </div>
+
+                <div class="float-card card-two">
+                    <strong>Checkout</strong>
+                    <span>Seguro</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo reveal" id="demo">
+            <div class="section-title">
+                <span class="tag">DEMONSTRAÇÃO</span>
+                <h2>Veja sistemas em ação.</h2>
+                <p>Use vídeos curtos para mostrar login, painel, cadastro, produtos, carrinho e relatórios.</p>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <video autoplay muted loop playsinline>
+                        <source src="/videos/dashboard.mp4" type="video/mp4">
+                    </video>
+                    <div>
+                        <span>SISTEMA</span>
+                        <h3>Painel administrativo</h3>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <video autoplay muted loop playsinline>
+                        <source src="/videos/ecommerce.mp4" type="video/mp4">
+                    </video>
+                    <div>
+                        <span>LOJA</span>
+                        <h3>E-commerce completo</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projetos">
+            <div class="section-title reveal">
+                <span class="tag">PROJETOS</span>
+                <h2>Projetos digitais com identidade.</h2>
+            </div>
+
+            <div class="project-list">
+                <article class="project reveal">
+                    <div class="project-media">
+                        <img src="/img/projetos/renove.png" alt="Projeto Renove">
+                    </div>
+
+                    <div class="project-info">
+                        <span>ECOMMERCE / SISTEMA</span>
+                        <h3>Renove Sistemas</h3>
+                        <p>
+                            Plataforma com produtos, clientes, login, carrinho, checkout,
+                            upload de imagens e painel administrativo.
+                        </p>
+
+                        <ul>
+                            <li>Cadastro de produtos</li>
+                            <li>Login de usuário e cliente</li>
+                            <li>Checkout e carrinho</li>
+                            <li>Painel administrativo</li>
+                        </ul>
+
+                        <button onclick="openMedia('/img/projetos/renove.png')">
+                            Ver screenshot
+                        </button>
+                    </div>
+                </article>
+
+                <article class="project reverse reveal">
+                    <div class="project-media">
+                        <img src="/img/projetos/dashboard.png" alt="Dashboard">
+                    </div>
+
+                    <div class="project-info">
+                        <span>DASHBOARD / ADMIN</span>
+                        <h3>LGS Control</h3>
+                        <p>
+                            Painel visual para controle interno, cadastros, métricas,
+                            relatórios e gerenciamento de dados.
+                        </p>
+
+                        <ul>
+                            <li>Layout responsivo</li>
+                            <li>Relatórios visuais</li>
+                            <li>CRUD completo</li>
+                            <li>Arquitetura MVC</li>
+                        </ul>
+
+                        <button onclick="openMedia('/img/projetos/dashboard.png')">
+                            Ver screenshot
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="gallery" id="galeria">
+            <div class="section-title reveal">
+                <span class="tag">GALERIA</span>
+                <h2>Fotos dos sites e sistemas.</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <img class="reveal" onclick="openMedia(this.src)" src="/img/projetos/tela1.png" alt="Tela 1">
+                <img class="reveal" onclick="openMedia(this.src)" src="/img/projetos/tela2.png" alt="Tela 2">
+                <img class="reveal" onclick="openMedia(this.src)" src="/img/projetos/tela3.png" alt="Tela 3">
+                <img class="reveal big" onclick="openMedia(this.src)" src="/img/projetos/tela4.png" alt="Tela 4">
+            </div>
+        </section>
+
+        <section class="services" id="servicos">
+            <div class="section-title reveal">
+                <span class="tag">SERVIÇOS</span>
+                <h2>O que a LGS desenvolve.</h2>
+            </div>
+
+            <div class="service-grid">
+                <div class="service reveal">
+                    <span>01</span>
+                    <h3>Sistemas Web</h3>
+                    <p>Sistemas personalizados com login, banco de dados, painel e relatórios.</p>
+                </div>
+
+                <div class="service reveal">
+                    <span>02</span>
+                    <h3>Sites Premium</h3>
+                    <p>Sites modernos para marcas que querem uma presença digital forte.</p>
+                </div>
+
+                <div class="service reveal">
+                    <span>03</span>
+                    <h3>E-commerce</h3>
+                    <p>Lojas virtuais com produtos, carrinho, checkout e administração.</p>
+                </div>
+
+                <div class="service reveal">
+                    <span>04</span>
+                    <h3>Dashboards</h3>
+                    <p>Painéis visuais para acompanhamento de dados e gestão empresarial.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stack reveal">
+            <span class="tag">TECNOLOGIAS</span>
+
+            <div class="stack-list">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>EJS</span>
+                <span>MySQL</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+                <span>MVC</span>
+                <span>Git</span>
+            </div>
+        </section>
+
+        <section class="contact reveal" id="contato">
+            <span class="tag">CONTATO</span>
+            <h2>Seu próximo sistema começa aqui.</h2>
+            <p>Me envie sua ideia e vamos transformar em uma solução digital completa.</p>
+
+            <div class="contact-actions">
+                <a href="https://wa.me/5518988014647" target="_blank">Chamar no WhatsApp</a>
+                <a href="mailto:contato@lgs.com">Enviar e-mail</a>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal" id="mediaModal" onclick="closeMedia()">
+        <img id="modalImage" src="">
+    </div>
+
+    <footer>
+        <p>© 2026 LGS Software House. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/js/lgs.js"></script>
+</body>
+
+</html>
