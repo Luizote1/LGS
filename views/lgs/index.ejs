@@ -3,282 +3,1095 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LGS | Software House</title>
-    <link rel="icon" href="/img/logo/logo.png">
-    <link rel="stylesheet" href="/css/lgs.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#020202"
+    >
+
+    <meta
+        name="description"
+        content="LGS Software - Desenvolvimento de sites, sistemas web, e-commerces, dashboards e soluções digitais."
+    >
+
+    <title>LGS | Software</title>
+
+    <link
+        rel="icon"
+        href="/img/logo/logo.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/lgs.css"
+    >
 </head>
 
 <body>
-    <div class="bg-grid"></div>
+
+    <!-- FUNDO -->
+    <div
+        class="bg-grid"
+        aria-hidden="true"
+    ></div>
+
+    <!-- PROGRESSO -->
+    <div
+        class="scroll-progress"
+        id="scrollProgress"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- ================================================== -->
+    <!-- NAVBAR -->
+    <!-- ================================================== -->
 
     <header class="navbar">
-        <a href="/" class="brand">
-            <img src="/img/logo/logo.png" alt="LGS">
+
+        <a
+            href="#inicio"
+            class="brand"
+            aria-label="LGS Software - Início"
+        >
+
+            <img
+                src="/img/logo/logo.png"
+                alt="Logo LGS"
+            >
+
             <div>
                 <strong>LGS</strong>
-                <span>Software House</span>
+                <span>Software</span>
             </div>
+
         </a>
 
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#galeria">Galeria</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contato">Contato</a>
+
+        <nav id="primaryNav">
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#projetos">
+                Projetos
+            </a>
+
+            <a href="#galeria">
+                Galeria
+            </a>
+
+            <a href="#servicos">
+                Serviços
+            </a>
+
+            <a href="#contato">
+                Contato
+            </a>
+
         </nav>
 
-        <a href="#contato" class="nav-btn">Solicitar projeto</a>
+
+        <a
+            href="#contato"
+            class="nav-btn"
+        >
+            Solicitar projeto
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="primaryNav"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
     </header>
+
+
 
     <main>
 
-        <section class="hero" id="inicio">
+
+        <!-- ================================================== -->
+        <!-- HERO -->
+        <!-- ================================================== -->
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
             <div class="hero-text reveal">
-                <span class="tag">WEBSITES • SISTEMAS • AUTOMAÇÕES</span>
+
+                <span class="tag">
+                    WEBSITES • SISTEMAS • AUTOMAÇÕES
+                </span>
+
 
                 <h1>
-                    Criamos sistemas que resolvem problemas reais.
+                    Criamos sistemas que
+                    <span>resolvem problemas reais.</span>
                 </h1>
 
+
                 <p>
-                    A LGS desenvolve sites, sistemas web, dashboards, e-commerces e plataformas
-                    personalizadas com visual moderno, performance e estrutura profissional.
+                    A LGS desenvolve sites, sistemas web,
+                    dashboards, e-commerces e plataformas
+                    personalizadas com visual moderno,
+                    performance e estrutura profissional.
                 </p>
 
+
                 <div class="buttons">
-                    <a href="#projetos" class="btn white">Ver projetos</a>
-                    <a href="#demo" class="btn dark">Assistir demo</a>
+
+                    <a
+                        href="#projetos"
+                        class="btn btn-primary magnetic"
+                    >
+                        Ver projetos
+                        <span class="button-arrow">↗</span>
+                    </a>
+
+
+                    <a
+                        href="#demo"
+                        class="btn btn-secondary magnetic"
+                    >
+                        Assistir demo
+                    </a>
+
                 </div>
+
 
                 <div class="numbers">
-                    <div>
-                        <strong>+10</strong>
-                        <span>Telas criadas</span>
-                    </div>
 
                     <div>
-                        <strong>100%</strong>
-                        <span>Responsivo</span>
+                        <strong data-number="10">
+                            +10
+                        </strong>
+
+                        <span>
+                            Telas criadas
+                        </span>
                     </div>
 
+
                     <div>
-                        <strong>MVC</strong>
-                        <span>Arquitetura</span>
+                        <strong data-number="100">
+                            100%
+                        </strong>
+
+                        <span>
+                            Responsivo
+                        </span>
                     </div>
+
+
+                    <div>
+                        <strong>
+                            MVC
+                        </strong>
+
+                        <span>
+                            Arquitetura
+                        </span>
+                    </div>
+
                 </div>
+
             </div>
+
+
 
             <div class="hero-preview reveal">
+
                 <div class="browser">
+
                     <div class="browser-top">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+
+                        <div class="browser-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+
+                        <div class="browser-address">
+                            lgs.software
+                        </div>
+
                     </div>
+
 
                     <div class="screen">
-                        <div class="dash-sidebar"></div>
-                        <div class="dash-main">
-                            <div class="dash-line"></div>
-                            <div class="dash-cards">
-                                <div></div>
-                                <div></div>
-                                <div></div>
+
+                        <aside class="dash-sidebar">
+
+                            <div class="dash-logo"></div>
+
+                            <div class="dash-menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
-                            <div class="dash-table"></div>
+
+                        </aside>
+
+
+                        <div class="dash-main">
+
+                            <div class="dash-header">
+
+                                <div>
+                                    <div class="dash-line"></div>
+                                    <div class="dash-line small"></div>
+                                </div>
+
+                                <div class="dash-avatar"></div>
+
+                            </div>
+
+
+                            <div class="dash-cards">
+
+                                <div>
+                                    <small>Usuários</small>
+                                    <strong>1.280</strong>
+                                </div>
+
+                                <div>
+                                    <small>Vendas</small>
+                                    <strong>R$ 24k</strong>
+                                </div>
+
+                                <div>
+                                    <small>Projetos</small>
+                                    <strong>18</strong>
+                                </div>
+
+                            </div>
+
+
+                            <div class="dash-chart">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
 
                 <div class="float-card card-one">
-                    <strong>Dashboard</strong>
-                    <span>Online</span>
+
+                    <div class="status-icon"></div>
+
+                    <div>
+                        <strong>Dashboard</strong>
+                        <span>Online</span>
+                    </div>
+
                 </div>
+
 
                 <div class="float-card card-two">
-                    <strong>Checkout</strong>
-                    <span>Seguro</span>
+
+                    <div class="shield-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>Checkout</strong>
+                        <span>Seguro</span>
+                    </div>
+
                 </div>
+
             </div>
+
         </section>
 
-        <section class="demo reveal" id="demo">
-            <div class="section-title">
-                <span class="tag">DEMONSTRAÇÃO</span>
-                <h2>Veja sistemas em ação.</h2>
-                <p>Use vídeos curtos para mostrar login, painel, cadastro, produtos, carrinho e relatórios.</p>
+
+
+        <!-- ================================================== -->
+        <!-- DEMONSTRAÇÃO -->
+        <!-- ================================================== -->
+
+        <section
+            class="demo"
+            id="demo"
+        >
+
+            <div class="section-title reveal">
+
+                <span class="tag">
+                    DEMONSTRAÇÃO
+                </span>
+
+                <h2>
+                    Veja sistemas
+                    <span>em ação.</span>
+                </h2>
+
+                <p>
+                    Interfaces modernas, sistemas funcionais
+                    e experiências desenvolvidas para uso real.
+                </p>
+
             </div>
+
 
             <div class="video-grid">
-                <div class="video-card">
-                    <video autoplay muted loop playsinline>
-                        <source src="/videos/dashboard.mp4" type="video/mp4">
-                    </video>
-                    <div>
-                        <span>SISTEMA</span>
-                        <h3>Painel administrativo</h3>
-                    </div>
-                </div>
 
-                <div class="video-card">
-                    <video autoplay muted loop playsinline>
-                        <source src="/videos/ecommerce.mp4" type="video/mp4">
-                    </video>
-                    <div>
-                        <span>LOJA</span>
-                        <h3>E-commerce completo</h3>
+                <article class="video-card reveal tilt-card">
+
+                    <div class="video-wrapper">
+
+                        <video
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata"
+                        >
+                            <source
+                                src="/videos/dashboard.mp4"
+                                type="video/mp4"
+                            >
+                        </video>
+
+                        <div class="video-badge">
+                            LIVE
+                        </div>
+
                     </div>
-                </div>
+
+
+                    <div class="video-info">
+
+                        <span>
+                            SISTEMA
+                        </span>
+
+                        <h3>
+                            Painel administrativo
+                        </h3>
+
+                        <p>
+                            Controle, indicadores,
+                            cadastros e gestão em um só lugar.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="video-card reveal tilt-card">
+
+                    <div class="video-wrapper">
+
+                        <video
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata"
+                        >
+                            <source
+                                src="/videos/ecommerce.mp4"
+                                type="video/mp4"
+                            >
+                        </video>
+
+                        <div class="video-badge">
+                            LIVE
+                        </div>
+
+                    </div>
+
+
+                    <div class="video-info">
+
+                        <span>
+                            E-COMMERCE
+                        </span>
+
+                        <h3>
+                            Loja virtual completa
+                        </h3>
+
+                        <p>
+                            Produtos, carrinho, login,
+                            checkout e administração.
+                        </p>
+
+                    </div>
+
+                </article>
+
             </div>
+
         </section>
 
-        <section class="projects" id="projetos">
+
+
+        <!-- ================================================== -->
+        <!-- PROJETOS -->
+        <!-- ================================================== -->
+
+        <section
+            class="projects"
+            id="projetos"
+        >
+
             <div class="section-title reveal">
-                <span class="tag">PROJETOS</span>
-                <h2>Projetos digitais com identidade.</h2>
+
+                <span class="tag">
+                    PROJETOS
+                </span>
+
+                <h2>
+                    Projetos digitais
+                    <span>com identidade.</span>
+                </h2>
+
             </div>
+
+
 
             <div class="project-list">
+
+
+                <!-- PROJETO 01 -->
+
                 <article class="project reveal">
-                    <div class="project-media">
-                        <img src="/img/projetos/renove.png" alt="Projeto Renove">
-                    </div>
+
+                    <a
+                        class="project-media site-preview tilt-card"
+                        href="https://renove-cosmeticos.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <iframe
+                            src="https://renove-cosmeticos.vercel.app/"
+                            loading="lazy"
+                            title="Preview Renove Sistemas"
+                            tabindex="-1"
+                        ></iframe>
+
+
+                        <div class="site-overlay">
+
+                            <div class="project-number">
+                                01
+                            </div>
+
+                            <span>
+                                Abrir projeto ↗
+                            </span>
+
+                        </div>
+
+                    </a>
+
 
                     <div class="project-info">
-                        <span>ECOMMERCE / SISTEMA</span>
-                        <h3>Renove Sistemas</h3>
+
+                        <span>
+                            ECOMMERCE / SISTEMA
+                        </span>
+
+                        <h3>
+                            Renove Sistemas
+                        </h3>
+
                         <p>
-                            Plataforma com produtos, clientes, login, carrinho, checkout,
-                            upload de imagens e painel administrativo.
+                            Plataforma completa com produtos,
+                            clientes, login, carrinho, checkout,
+                            imagens e painel administrativo.
                         </p>
 
+
                         <ul>
-                            <li>Cadastro de produtos</li>
-                            <li>Login de usuário e cliente</li>
-                            <li>Checkout e carrinho</li>
-                            <li>Painel administrativo</li>
+
+                            <li>
+                                Cadastro de produtos
+                            </li>
+
+                            <li>
+                                Login de usuário e cliente
+                            </li>
+
+                            <li>
+                                Checkout e carrinho
+                            </li>
+
+                            <li>
+                                Painel administrativo
+                            </li>
+
                         </ul>
 
-                        <button onclick="openMedia('/img/projetos/renove.png')">
-                            Ver screenshot
-                        </button>
+
+                        <a
+                            class="project-btn magnetic"
+                            href="https://renove-cosmeticos.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Acessar sistema
+                            <span>↗</span>
+                        </a>
+
                     </div>
+
                 </article>
+
+
+
+                <!-- PROJETO 02 -->
 
                 <article class="project reverse reveal">
-                    <div class="project-media">
-                        <img src="/img/projetos/dashboard.png" alt="Dashboard">
-                    </div>
+
+                    <button
+                        class="project-media image-project tilt-card"
+                        type="button"
+                        data-media="/img/projetos/dashboard.png"
+                        data-alt="Dashboard LGS Control"
+                        aria-label="Ampliar screenshot LGS Control"
+                    >
+
+                        <img
+                            src="/img/projetos/dashboard.png"
+                            alt="Dashboard LGS Control"
+                            loading="lazy"
+                        >
+
+
+                        <div class="image-overlay">
+
+                            <div class="project-number">
+                                02
+                            </div>
+
+                            <span>
+                                Ver screenshot
+                            </span>
+
+                        </div>
+
+                    </button>
+
 
                     <div class="project-info">
-                        <span>DASHBOARD / ADMIN</span>
-                        <h3>LGS Control</h3>
+
+                        <span>
+                            DASHBOARD / ADMIN
+                        </span>
+
+                        <h3>
+                            LGS Control
+                        </h3>
+
                         <p>
-                            Painel visual para controle interno, cadastros, métricas,
-                            relatórios e gerenciamento de dados.
+                            Painel visual para controle interno,
+                            cadastros, métricas, relatórios
+                            e gerenciamento de dados.
                         </p>
 
+
                         <ul>
-                            <li>Layout responsivo</li>
-                            <li>Relatórios visuais</li>
-                            <li>CRUD completo</li>
-                            <li>Arquitetura MVC</li>
+
+                            <li>
+                                Layout responsivo
+                            </li>
+
+                            <li>
+                                Relatórios visuais
+                            </li>
+
+                            <li>
+                                CRUD completo
+                            </li>
+
+                            <li>
+                                Arquitetura MVC
+                            </li>
+
                         </ul>
 
-                        <button onclick="openMedia('/img/projetos/dashboard.png')">
+
+                        <button
+                            class="project-btn magnetic"
+                            type="button"
+                            data-media="/img/projetos/dashboard.png"
+                            data-alt="Dashboard LGS Control"
+                        >
                             Ver screenshot
+                            <span>↗</span>
                         </button>
+
                     </div>
+
                 </article>
+
             </div>
+
         </section>
 
-        <section class="gallery" id="galeria">
+
+
+        <!-- ================================================== -->
+        <!-- GALERIA -->
+        <!-- ================================================== -->
+
+        <section
+            class="gallery"
+            id="galeria"
+        >
+
             <div class="section-title reveal">
-                <span class="tag">GALERIA</span>
-                <h2>Fotos dos sites e sistemas.</h2>
+
+                <span class="tag">
+                    GALERIA
+                </span>
+
+                <h2>
+                    Detalhes dos
+                    <span>projetos.</span>
+                </h2>
+
             </div>
+
 
             <div class="gallery-grid">
-                <img class="reveal" onclick="openMedia(this.src)" src="/img/projetos/tela1.png" alt="Tela 1">
-                <img class="reveal" onclick="openMedia(this.src)" src="/img/projetos/tela2.png" alt="Tela 2">
-                <img class="reveal" onclick="openMedia(this.src)" src="/img/projetos/tela3.png" alt="Tela 3">
-                <img class="reveal big" onclick="openMedia(this.src)" src="/img/projetos/tela4.png" alt="Tela 4">
+
+                <button
+                    class="gallery-item reveal"
+                    type="button"
+                    data-media="/img/projetos/tela1.png"
+                    data-alt="Tela 1"
+                >
+                    <img
+                        src="/img/projetos/tela1.png"
+                        alt="Tela 1"
+                        loading="lazy"
+                    >
+
+                    <span>
+                        Visualizar ↗
+                    </span>
+                </button>
+
+
+                <button
+                    class="gallery-item reveal"
+                    type="button"
+                    data-media="/img/projetos/tela2.png"
+                    data-alt="Tela 2"
+                >
+                    <img
+                        src="/img/projetos/tela2.png"
+                        alt="Tela 2"
+                        loading="lazy"
+                    >
+
+                    <span>
+                        Visualizar ↗
+                    </span>
+                </button>
+
+
+                <button
+                    class="gallery-item reveal"
+                    type="button"
+                    data-media="/img/projetos/tela3.png"
+                    data-alt="Tela 3"
+                >
+                    <img
+                        src="/img/projetos/tela3.png"
+                        alt="Tela 3"
+                        loading="lazy"
+                    >
+
+                    <span>
+                        Visualizar ↗
+                    </span>
+                </button>
+
+
+                <button
+                    class="gallery-item big reveal"
+                    type="button"
+                    data-media="/img/projetos/tela4.png"
+                    data-alt="Tela 4"
+                >
+                    <img
+                        src="/img/projetos/tela4.png"
+                        alt="Tela 4"
+                        loading="lazy"
+                    >
+
+                    <span>
+                        Visualizar ↗
+                    </span>
+                </button>
+
             </div>
+
         </section>
 
-        <section class="services" id="servicos">
+
+
+        <!-- ================================================== -->
+        <!-- SERVIÇOS -->
+        <!-- ================================================== -->
+
+        <section
+            class="services"
+            id="servicos"
+        >
+
             <div class="section-title reveal">
-                <span class="tag">SERVIÇOS</span>
-                <h2>O que a LGS desenvolve.</h2>
+
+                <span class="tag">
+                    SERVIÇOS
+                </span>
+
+                <h2>
+                    O que a LGS
+                    <span>desenvolve.</span>
+                </h2>
+
             </div>
+
 
             <div class="service-grid">
-                <div class="service reveal">
-                    <span>01</span>
-                    <h3>Sistemas Web</h3>
-                    <p>Sistemas personalizados com login, banco de dados, painel e relatórios.</p>
-                </div>
 
-                <div class="service reveal">
-                    <span>02</span>
-                    <h3>Sites Premium</h3>
-                    <p>Sites modernos para marcas que querem uma presença digital forte.</p>
-                </div>
+                <article class="service reveal tilt-card">
 
-                <div class="service reveal">
-                    <span>03</span>
-                    <h3>E-commerce</h3>
-                    <p>Lojas virtuais com produtos, carrinho, checkout e administração.</p>
-                </div>
+                    <span class="service-number">
+                        01
+                    </span>
 
-                <div class="service reveal">
-                    <span>04</span>
-                    <h3>Dashboards</h3>
-                    <p>Painéis visuais para acompanhamento de dados e gestão empresarial.</p>
-                </div>
+                    <div>
+
+                        <h3>
+                            Sistemas Web
+                        </h3>
+
+                        <p>
+                            Sistemas personalizados com login,
+                            banco de dados, painel,
+                            cadastros e relatórios.
+                        </p>
+
+                    </div>
+
+                    <strong class="service-arrow">
+                        ↗
+                    </strong>
+
+                </article>
+
+
+
+                <article class="service reveal tilt-card">
+
+                    <span class="service-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Sites Premium
+                        </h3>
+
+                        <p>
+                            Sites modernos, rápidos e responsivos
+                            para marcas que querem presença
+                            digital profissional.
+                        </p>
+
+                    </div>
+
+                    <strong class="service-arrow">
+                        ↗
+                    </strong>
+
+                </article>
+
+
+
+                <article class="service reveal tilt-card">
+
+                    <span class="service-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            E-commerce
+                        </h3>
+
+                        <p>
+                            Lojas virtuais com produtos,
+                            carrinho, checkout,
+                            clientes e administração.
+                        </p>
+
+                    </div>
+
+                    <strong class="service-arrow">
+                        ↗
+                    </strong>
+
+                </article>
+
+
+
+                <article class="service reveal tilt-card">
+
+                    <span class="service-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Dashboards
+                        </h3>
+
+                        <p>
+                            Painéis modernos para métricas,
+                            relatórios, acompanhamento
+                            e gestão empresarial.
+                        </p>
+
+                    </div>
+
+                    <strong class="service-arrow">
+                        ↗
+                    </strong>
+
+                </article>
+
             </div>
+
         </section>
+
+
+
+        <!-- ================================================== -->
+        <!-- TECNOLOGIAS -->
+        <!-- ================================================== -->
 
         <section class="stack reveal">
-            <span class="tag">TECNOLOGIAS</span>
+
+            <div class="stack-header">
+
+                <span class="tag">
+                    TECNOLOGIAS
+                </span>
+
+                <p>
+                    Tecnologias utilizadas para transformar
+                    ideias em produtos digitais.
+                </p>
+
+            </div>
+
 
             <div class="stack-list">
+
                 <span>Node.js</span>
+
                 <span>Express</span>
+
                 <span>EJS</span>
+
                 <span>MySQL</span>
+
                 <span>JavaScript</span>
+
+                <span>HTML5</span>
+
+                <span>CSS3</span>
+
                 <span>Bootstrap</span>
+
                 <span>MVC</span>
+
                 <span>Git</span>
+
             </div>
+
         </section>
 
-        <section class="contact reveal" id="contato">
-            <span class="tag">CONTATO</span>
-            <h2>Seu próximo sistema começa aqui.</h2>
-            <p>Me envie sua ideia e vamos transformar em uma solução digital completa.</p>
+
+
+        <!-- ================================================== -->
+        <!-- CONTATO -->
+        <!-- ================================================== -->
+
+        <section
+            class="contact reveal"
+            id="contato"
+        >
+
+            <span class="tag">
+                VAMOS CONVERSAR?
+            </span>
+
+
+            <h2>
+                Seu próximo sistema
+                <span>começa aqui.</span>
+            </h2>
+
+
+            <p>
+                Tem uma ideia de site, sistema ou plataforma?
+                Vamos transformar essa ideia em uma
+                solução digital profissional.
+            </p>
+
 
             <div class="contact-actions">
-                <a href="https://wa.me/5518988014647" target="_blank">Chamar no WhatsApp</a>
-                <a href="mailto:contato@lgs.com">Enviar e-mail</a>
+
+                <a
+                    href="https://wa.me/5518988014647"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-primary magnetic"
+                >
+                    Chamar no WhatsApp
+                    <span>↗</span>
+                </a>
+
+
+                <a
+                    href="mailto:contato@lgs.com"
+                    class="contact-secondary magnetic"
+                >
+                    Enviar e-mail
+                </a>
+
             </div>
+
         </section>
 
     </main>
 
-    <div class="modal" id="mediaModal" onclick="closeMedia()">
-        <img id="modalImage" src="">
+
+
+    <!-- ================================================== -->
+    <!-- MODAL -->
+    <!-- ================================================== -->
+
+    <div
+        class="modal"
+        id="mediaModal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-label="Visualização de imagem"
+    >
+
+        <button
+            type="button"
+            class="modal-close"
+            id="modalClose"
+            aria-label="Fechar imagem"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-content">
+
+            <img
+                id="modalImage"
+                src=""
+                alt="Imagem ampliada"
+            >
+
+        </div>
+
     </div>
 
+
+
+    <!-- ================================================== -->
+    <!-- FOOTER -->
+    <!-- ================================================== -->
+
     <footer>
-        <p>© 2026 LGS Software House. Todos os direitos reservados.</p>
+
+        <a
+            href="#inicio"
+            class="footer-brand"
+        >
+            <img
+                src="/img/logo/logo.png"
+                alt="LGS"
+            >
+
+            <div>
+                <strong>LGS</strong>
+                <span>Software</span>
+            </div>
+        </a>
+
+
+        <p>
+            © 2026 LGS Software.
+            Todos os direitos reservados.
+        </p>
+
+
+        <a
+            href="#inicio"
+            class="back-top"
+            aria-label="Voltar para o início"
+        >
+            ↑
+        </a>
+
     </footer>
 
+
+
     <script src="/js/lgs.js"></script>
+
 </body>
 
 </html>
