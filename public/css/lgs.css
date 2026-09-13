@@ -24,9 +24,15 @@
 
     --muted-light:#b9b9b9;
 
-    --purple:#6868ff;
+    --blue:#0149ff;
 
-    --purple-soft:rgba(104,104,255,.18);
+    --blue-bright:#3772ff;
+
+    --blue-dark:#0036bd;
+
+    --blue-soft:rgba(1,73,255,.18);
+
+    --blue-border:rgba(1,73,255,.42);
 
     --radius-small:18px;
 
@@ -128,9 +134,9 @@ a{
 
 ::selection{
 
-    background:#fff;
+    background:var(--blue);
 
-    color:#000;
+    color:#fff;
 
 }
 
@@ -155,7 +161,7 @@ a{
 
 ::-webkit-scrollbar-thumb{
 
-    background:#292929;
+    background:var(--blue-dark);
 
     border-radius:50px;
 
@@ -164,7 +170,7 @@ a{
 
 ::-webkit-scrollbar-thumb:hover{
 
-    background:#454545;
+    background:var(--blue);
 
 }
 
@@ -204,13 +210,13 @@ a{
 
         radial-gradient(
             circle at 80% 28%,
-            rgba(80,80,255,.15),
+            rgba(1,73,255,.22),
             transparent 27%
         ),
 
         radial-gradient(
             circle at 40% 75%,
-            rgba(80,80,255,.07),
+            rgba(1,73,255,.10),
             transparent 22%
         );
 
@@ -246,13 +252,13 @@ a{
 
     pointer-events:none;
 
-    background:#fff;
+    background:var(--blue);
 
     box-shadow:
 
-        0 0 10px rgba(255,255,255,.8),
+        0 0 10px rgba(1,73,255,.95),
 
-        0 0 25px rgba(255,255,255,.25);
+        0 0 25px rgba(1,73,255,.55);
 
 }
 
@@ -330,10 +336,11 @@ footer{
 
     background:rgba(4,4,4,.94);
 
-    border-color:#292929;
+    border-color:var(--blue-border);
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,.45);
+        0 20px 60px rgba(0,0,0,.45),
+        0 0 35px rgba(1,73,255,.08);
 
 }
 
@@ -380,6 +387,8 @@ footer{
 
     letter-spacing:2px;
 
+    color:#fff;
+
 }
 
 
@@ -389,7 +398,7 @@ footer{
 
     margin-top:5px;
 
-    color:#7e7e7e;
+    color:var(--blue-bright);
 
     font-size:9px;
 
@@ -454,7 +463,9 @@ nav a::after{
 
     border-radius:10px;
 
-    background:#fff;
+    background:var(--blue);
+
+    box-shadow:0 0 14px rgba(1,73,255,.65);
 
     transform:scaleX(0);
 
@@ -510,9 +521,9 @@ nav a.active::after{
 
     border-radius:40px;
 
-    background:#fff;
+    background:var(--blue);
 
-    color:#000;
+    color:#fff;
 
     font-size:13px;
 
@@ -528,7 +539,7 @@ nav a.active::after{
 .nav-btn:hover{
 
     box-shadow:
-        0 12px 40px rgba(255,255,255,.16);
+        0 12px 40px rgba(1,73,255,.36);
 
 }
 
@@ -547,7 +558,7 @@ nav a.active::after{
 
     flex-shrink:0;
 
-    border:1px solid #292929;
+    border:1px solid var(--blue-border);
 
     border-radius:50%;
 
@@ -652,7 +663,7 @@ nav a.active::after{
 
     gap:10px;
 
-    color:#9b9b9b;
+    color:var(--blue-bright);
 
     font-size:11px;
 
@@ -673,7 +684,9 @@ nav a.active::after{
 
     height:1px;
 
-    background:#707070;
+    background:var(--blue);
+
+    box-shadow:0 0 12px rgba(1,73,255,.7);
 
 }
 
@@ -703,7 +716,7 @@ nav a.active::after{
 .section-title h2 span,
 .contact h2 span{
 
-    color:#676767;
+    color:var(--blue-bright);
 
 }
 
@@ -771,9 +784,9 @@ nav a.active::after{
 
 .btn-primary{
 
-    background:#fff;
+    background:var(--blue);
 
-    color:#000;
+    color:#fff;
 
 }
 
@@ -781,7 +794,7 @@ nav a.active::after{
 .btn-primary:hover{
 
     box-shadow:
-        0 18px 55px rgba(255,255,255,.15);
+        0 18px 55px rgba(1,73,255,.36);
 
 }
 
@@ -799,9 +812,9 @@ nav a.active::after{
 
 .btn-secondary:hover{
 
-    border-color:#555;
+    border-color:var(--blue-border);
 
-    background:#0d0d0d;
+    background:var(--blue-soft);
 
 }
 
@@ -844,6 +857,22 @@ nav a.active::after{
 
     backdrop-filter:blur(10px);
 
+    transition:
+        border-color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.numbers > div:hover{
+
+    border-color:var(--blue-border);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 16px 38px rgba(1,73,255,.10);
+
 }
 
 
@@ -856,6 +885,8 @@ nav a.active::after{
     font-size:25px;
 
     font-weight:900;
+
+    color:var(--blue-bright);
 
 }
 
@@ -888,7 +919,7 @@ nav a.active::after{
 
     overflow:hidden;
 
-    border:1px solid #262626;
+    border:1px solid rgba(1,73,255,.28);
 
     border-radius:30px;
 
@@ -898,7 +929,7 @@ nav a.active::after{
 
         0 50px 120px rgba(0,0,0,.5),
 
-        0 0 80px rgba(255,255,255,.055);
+        0 0 80px rgba(1,73,255,.12);
 
     transition:
         transform .25s ease;
@@ -945,6 +976,17 @@ nav a.active::after{
     background:#fff;
 
     opacity:.25;
+
+}
+
+
+.browser-dots span:first-child{
+
+    background:var(--blue);
+
+    opacity:1;
+
+    box-shadow:0 0 10px rgba(1,73,255,.75);
 
 }
 
@@ -1023,9 +1065,11 @@ nav a.active::after{
     background:
         linear-gradient(
             135deg,
-            #fff,
-            #777
+            var(--blue-bright),
+            var(--blue-dark)
         );
+
+    box-shadow:0 8px 24px rgba(1,73,255,.30);
 
 }
 
@@ -1054,7 +1098,7 @@ nav a.active::after{
 
 .dash-menu span:first-child{
 
-    background:#454545;
+    background:var(--blue);
 
 }
 
@@ -1122,8 +1166,8 @@ nav a.active::after{
     background:
         linear-gradient(
             135deg,
-            #414141,
-            #1b1b1b
+            var(--blue-bright),
+            var(--blue-dark)
         );
 
 }
@@ -1183,6 +1227,8 @@ nav a.active::after{
 
     font-size:15px;
 
+    color:var(--blue-bright);
+
 }
 
 
@@ -1223,9 +1269,11 @@ nav a.active::after{
     background:
         linear-gradient(
             180deg,
-            #525252,
-            #202020
+            var(--blue-bright),
+            var(--blue-dark)
         );
+
+    box-shadow:0 0 14px rgba(1,73,255,.16);
 
 }
 
@@ -1299,7 +1347,7 @@ nav a.active::after{
 
     gap:12px;
 
-    border:1px solid rgba(255,255,255,.8);
+    border:1px solid rgba(1,73,255,.55);
 
     border-radius:18px;
 
@@ -1308,7 +1356,8 @@ nav a.active::after{
     color:#000;
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,.35);
+        0 20px 60px rgba(0,0,0,.35),
+        0 0 30px rgba(1,73,255,.14);
 
     transition:
         transform .25s ease;
@@ -1386,7 +1435,7 @@ nav a.active::after{
 
     border-radius:9px;
 
-    background:#111;
+    background:var(--blue);
 
     color:#fff;
 
@@ -1489,7 +1538,7 @@ nav a.active::after{
 
 .video-card:hover{
 
-    border-color:#343434;
+    border-color:var(--blue-border);
 
 }
 
@@ -1552,7 +1601,7 @@ nav a.active::after{
 
     padding:8px 12px;
 
-    border:1px solid rgba(255,255,255,.14);
+    border:1px solid var(--blue-border);
 
     border-radius:30px;
 
@@ -1560,7 +1609,7 @@ nav a.active::after{
 
     backdrop-filter:blur(10px);
 
-    color:#ddd;
+    color:#fff;
 
     font-size:9px;
 
@@ -1581,7 +1630,7 @@ nav a.active::after{
 .video-info > span,
 .project-info > span{
 
-    color:#767676;
+    color:var(--blue-bright);
 
     font-size:10px;
 
@@ -1679,7 +1728,7 @@ nav a.active::after{
 
 .project-media:hover{
 
-    border-color:#373737;
+    border-color:var(--blue-border);
 
 }
 
@@ -1771,9 +1820,9 @@ nav a.active::after{
 
     border-radius:30px;
 
-    background:rgba(255,255,255,.94);
+    background:rgba(1,73,255,.94);
 
-    color:#000;
+    color:#fff;
 
     font-size:11px;
 
@@ -1792,7 +1841,7 @@ nav a.active::after{
 
     place-items:center;
 
-    border:1px solid rgba(255,255,255,.15);
+    border:1px solid var(--blue-border);
 
     border-radius:50%;
 
@@ -1867,7 +1916,7 @@ nav a.active::after{
 
     margin-right:10px;
 
-    color:#fff;
+    color:var(--blue-bright);
 
     font-size:11px;
 
@@ -1890,9 +1939,9 @@ nav a.active::after{
 
     border-radius:50px;
 
-    background:#fff;
+    background:var(--blue);
 
-    color:#000;
+    color:#fff;
 
     transition:
         box-shadow .25s ease,
@@ -1905,7 +1954,7 @@ nav a.active::after{
 .project-btn:hover{
 
     box-shadow:
-        0 15px 45px rgba(255,255,255,.14);
+        0 15px 45px rgba(1,73,255,.32);
 
 }
 
@@ -1942,6 +1991,19 @@ nav a.active::after{
     background:#080808;
 
     cursor:pointer;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.gallery-item:hover{
+
+    border-color:var(--blue-border);
+
+    box-shadow:0 20px 55px rgba(1,73,255,.10);
 
 }
 
@@ -2025,9 +2087,9 @@ nav a.active::after{
 
     border-radius:30px;
 
-    background:#fff;
+    background:var(--blue);
 
-    color:#000;
+    color:#fff;
 
     font-size:10px;
 
@@ -2122,7 +2184,7 @@ nav a.active::after{
     background:
         radial-gradient(
             circle,
-            rgba(255,255,255,.08),
+            rgba(1,73,255,.22),
             transparent 70%
         );
 
@@ -2135,7 +2197,7 @@ nav a.active::after{
 
 .service:hover{
 
-    border-color:#313131;
+    border-color:var(--blue-border);
 
     background:#0b0b0b;
 
@@ -2151,7 +2213,7 @@ nav a.active::after{
 
 .service-number{
 
-    color:#666;
+    color:var(--blue-bright);
 
     font-size:11px;
 
@@ -2204,7 +2266,7 @@ nav a.active::after{
 
 .service:hover .service-arrow{
 
-    color:#fff;
+    color:var(--blue-bright);
 
     transform:
         translate(3px,-3px);
@@ -2226,9 +2288,9 @@ nav a.active::after{
 
     gap:60px;
 
-    border-top:1px solid #121212;
+    border-top:1px solid rgba(1,73,255,.18);
 
-    border-bottom:1px solid #121212;
+    border-bottom:1px solid rgba(1,73,255,.18);
 
 }
 
@@ -2290,11 +2352,11 @@ nav a.active::after{
 
 .stack-list span:hover{
 
-    border-color:#fff;
+    border-color:var(--blue);
 
-    background:#fff;
+    background:var(--blue);
 
-    color:#000;
+    color:#fff;
 
     transform:translateY(-3px);
 
@@ -2391,9 +2453,9 @@ nav a.active::after{
 
 .contact-primary{
 
-    background:#fff;
+    background:var(--blue);
 
-    color:#000;
+    color:#fff;
 
 }
 
@@ -2401,7 +2463,7 @@ nav a.active::after{
 .contact-primary:hover{
 
     box-shadow:
-        0 20px 55px rgba(255,255,255,.14);
+        0 20px 55px rgba(1,73,255,.34);
 
 }
 
@@ -2419,7 +2481,9 @@ nav a.active::after{
 
 .contact-secondary:hover{
 
-    border-color:#555;
+    border-color:var(--blue-border);
+
+    background:var(--blue-soft);
 
 }
 
@@ -2493,7 +2557,7 @@ nav a.active::after{
 
     object-fit:contain;
 
-    border:1px solid #222;
+    border:1px solid var(--blue-border);
 
     border-radius:22px;
 
@@ -2570,9 +2634,9 @@ nav a.active::after{
 
 .modal-close:hover{
 
-    background:#fff;
+    background:var(--blue);
 
-    color:#000;
+    color:#fff;
 
     transform:rotate(90deg);
 
@@ -2694,9 +2758,9 @@ footer p{
 
 .back-top:hover{
 
-    background:#fff;
+    background:var(--blue);
 
-    color:#000;
+    color:#fff;
 
 }
 
@@ -2776,8 +2840,8 @@ footer p{
 
         radial-gradient(
             circle,
-            rgba(100,100,255,.32),
-            rgba(255,255,255,.035) 38%,
+            rgba(1,73,255,.42),
+            rgba(1,73,255,.06) 38%,
             transparent 70%
         );
 
@@ -2791,7 +2855,7 @@ footer p{
 a:focus-visible,
 button:focus-visible{
 
-    outline:2px solid #fff;
+    outline:2px solid var(--blue-bright);
 
     outline-offset:4px;
 

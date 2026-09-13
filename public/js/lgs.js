@@ -17,8 +17,8 @@
         selector,
         scope = document
     ) => [
-        ...scope.querySelectorAll(selector)
-    ];
+            ...scope.querySelectorAll(selector)
+        ];
 
 
     const prefersReducedMotion =
@@ -38,23 +38,23 @@
     // REVEAL
     // =========================================================
 
-    function initReveal(){
+    function initReveal() {
 
         const elements =
             $$(".reveal");
 
 
-        if(!elements.length){
+        if (!elements.length) {
 
             return;
 
         }
 
 
-        if(
+        if (
             prefersReducedMotion ||
             !("IntersectionObserver" in window)
-        ){
+        ) {
 
             elements.forEach(element => {
 
@@ -76,7 +76,7 @@
 
                     entries.forEach(entry => {
 
-                        if(!entry.isIntersecting){
+                        if (!entry.isIntersecting) {
 
                             return;
 
@@ -98,7 +98,7 @@
 
                 {
 
-                    threshold:.12,
+                    threshold: .12,
 
                     rootMargin:
                         "0px 0px -60px 0px"
@@ -109,10 +109,10 @@
 
 
         elements.forEach(
-            (element,index) => {
+            (element, index) => {
 
                 element.style.transitionDelay =
-                    `${Math.min(index % 4,3) * 55}ms`;
+                    `${Math.min(index % 4, 3) * 55}ms`;
 
 
                 observer.observe(
@@ -130,20 +130,20 @@
     // NAVBAR
     // =========================================================
 
-    function initNavbar(){
+    function initNavbar() {
 
         const navbar =
             $(".navbar");
 
 
-        if(!navbar){
+        if (!navbar) {
 
             return;
 
         }
 
 
-        function updateNavbar(){
+        function updateNavbar() {
 
             navbar.classList.toggle(
 
@@ -166,7 +166,7 @@
             updateNavbar,
 
             {
-                passive:true
+                passive: true
             }
 
         );
@@ -179,7 +179,7 @@
     // MENU MOBILE
     // =========================================================
 
-    function initMobileMenu(){
+    function initMobileMenu() {
 
         const button =
             $("#menuToggle");
@@ -189,17 +189,17 @@
             $("#primaryNav");
 
 
-        if(
+        if (
             !button ||
             !nav
-        ){
+        ) {
 
             return;
 
         }
 
 
-        function openMenu(){
+        function openMenu() {
 
             button.classList.add(
                 "active"
@@ -230,7 +230,7 @@
         }
 
 
-        function closeMenu(){
+        function closeMenu() {
 
             button.classList.remove(
                 "active"
@@ -271,12 +271,12 @@
                     );
 
 
-                if(open){
+                if (open) {
 
                     closeMenu();
 
                 }
-                else{
+                else {
 
                     openMenu();
 
@@ -286,7 +286,7 @@
         );
 
 
-        $$("a",nav).forEach(
+        $$("a", nav).forEach(
             link => {
 
                 link.addEventListener(
@@ -302,12 +302,12 @@
             "keydown",
             event => {
 
-                if(
+                if (
                     event.key === "Escape" &&
                     nav.classList.contains(
                         "mobile-open"
                     )
-                ){
+                ) {
 
                     closeMenu();
 
@@ -323,10 +323,10 @@
             "resize",
             () => {
 
-                if(
+                if (
                     window.innerWidth >
                     1000
-                ){
+                ) {
 
                     closeMenu();
 
@@ -343,7 +343,7 @@
     // SMOOTH SCROLL
     // =========================================================
 
-    function initSmoothScroll(){
+    function initSmoothScroll() {
 
         $$('a[href^="#"]').forEach(
             link => {
@@ -358,10 +358,10 @@
                             );
 
 
-                        if(
+                        if (
                             !href ||
                             href === "#"
-                        ){
+                        ) {
 
                             return;
 
@@ -372,7 +372,7 @@
                             $(href);
 
 
-                        if(!target){
+                        if (!target) {
 
                             return;
 
@@ -443,16 +443,16 @@
     // ACTIVE NAVIGATION
     // =========================================================
 
-    function initActiveNavigation(){
+    function initActiveNavigation() {
 
         const links =
             $$('#primaryNav a[href^="#"]');
 
 
-        if(
+        if (
             !links.length ||
             !("IntersectionObserver" in window)
-        ){
+        ) {
 
             return;
 
@@ -489,13 +489,13 @@
                             )
 
                             .sort(
-                                (a,b) =>
+                                (a, b) =>
                                     b.intersectionRatio -
                                     a.intersectionRatio
                             )[0];
 
 
-                    if(!visible){
+                    if (!visible) {
 
                         return;
 
@@ -521,7 +521,7 @@
                         );
 
 
-                        if(active){
+                        if (active) {
 
                             link.setAttribute(
                                 "aria-current",
@@ -529,7 +529,7 @@
                             );
 
                         }
-                        else{
+                        else {
 
                             link.removeAttribute(
                                 "aria-current"
@@ -543,7 +543,7 @@
 
                 {
 
-                    threshold:[
+                    threshold: [
                         .1,
                         .25,
                         .5
@@ -575,13 +575,13 @@
     // SCROLL PROGRESS
     // =========================================================
 
-    function initScrollProgress(){
+    function initScrollProgress() {
 
         const progress =
             $("#scrollProgress");
 
 
-        if(!progress){
+        if (!progress) {
 
             return;
 
@@ -592,7 +592,7 @@
             false;
 
 
-        function update(){
+        function update() {
 
             const maxScroll =
 
@@ -608,7 +608,7 @@
             let percentage = 0;
 
 
-            if(maxScroll > 0){
+            if (maxScroll > 0) {
 
                 percentage =
 
@@ -640,9 +640,9 @@
         }
 
 
-        function requestUpdate(){
+        function requestUpdate() {
 
-            if(ticking){
+            if (ticking) {
 
                 return;
 
@@ -670,7 +670,7 @@
             requestUpdate,
 
             {
-                passive:true
+                passive: true
             }
 
         );
@@ -689,7 +689,7 @@
     // MODAL
     // =========================================================
 
-    function initModal(){
+    function initModal() {
 
         const modal =
             $("#mediaModal");
@@ -703,10 +703,10 @@
             $("#modalClose");
 
 
-        if(
+        if (
             !modal ||
             !image
-        ){
+        ) {
 
             return;
 
@@ -720,9 +720,9 @@
         function openMedia(
             src,
             alt = "Imagem ampliada"
-        ){
+        ) {
 
-            if(!src){
+            if (!src) {
 
                 return;
 
@@ -756,10 +756,10 @@
                 "hidden";
 
 
-            if(closeButton){
+            if (closeButton) {
 
                 closeButton.focus({
-                    preventScroll:true
+                    preventScroll: true
                 });
 
             }
@@ -767,13 +767,13 @@
         }
 
 
-        function closeMedia(){
+        function closeMedia() {
 
-            if(
+            if (
                 !modal.classList.contains(
                     "active"
                 )
-            ){
+            ) {
 
                 return;
 
@@ -798,11 +798,11 @@
             setTimeout(
                 () => {
 
-                    if(
+                    if (
                         !modal.classList.contains(
                             "active"
                         )
-                    ){
+                    ) {
 
                         image.src =
                             "";
@@ -814,13 +814,13 @@
             );
 
 
-            if(
+            if (
                 lastFocusedElement
                 instanceof HTMLElement
-            ){
+            ) {
 
                 lastFocusedElement.focus({
-                    preventScroll:true
+                    preventScroll: true
                 });
 
             }
@@ -855,9 +855,9 @@
             "click",
             event => {
 
-                if(
+                if (
                     event.target === modal
-                ){
+                ) {
 
                     closeMedia();
 
@@ -877,7 +877,7 @@
         );
 
 
-        if(closeButton){
+        if (closeButton) {
 
             closeButton.addEventListener(
                 "click",
@@ -891,10 +891,10 @@
             "keydown",
             event => {
 
-                if(
+                if (
                     event.key ===
                     "Escape"
-                ){
+                ) {
 
                     closeMedia();
 
@@ -919,12 +919,12 @@
     // CARD TILT
     // =========================================================
 
-    function initTiltCards(){
+    function initTiltCards() {
 
-        if(
+        if (
             !hasFinePointer ||
             prefersReducedMotion
-        ){
+        ) {
 
             return;
 
@@ -945,7 +945,7 @@
                 "mousemove",
                 event => {
 
-                    if(frame){
+                    if (frame) {
 
                         cancelAnimationFrame(
                             frame
@@ -1036,7 +1036,7 @@
                 "mouseleave",
                 () => {
 
-                    if(frame){
+                    if (frame) {
 
                         cancelAnimationFrame(
                             frame
@@ -1061,12 +1061,12 @@
     // HERO PARALLAX
     // =========================================================
 
-    function initHeroParallax(){
+    function initHeroParallax() {
 
-        if(
+        if (
             !hasFinePointer ||
             prefersReducedMotion
-        ){
+        ) {
 
             return;
 
@@ -1078,17 +1078,17 @@
 
 
         const browser =
-            $(".browser",preview);
+            $(".browser", preview);
 
 
         const floatingCards =
-            $$(".float-card",preview);
+            $$(".float-card", preview);
 
 
-        if(
+        if (
             !preview ||
             !browser
-        ){
+        ) {
 
             return;
 
@@ -1103,7 +1103,7 @@
             "mousemove",
             event => {
 
-                if(frame){
+                if (frame) {
 
                     cancelAnimationFrame(
                         frame
@@ -1184,15 +1184,13 @@
 
                                         translate3d(
 
-                                            ${
-                                                x *
-                                                strength
-                                            }px,
+                                            ${x *
+                                        strength
+                                        }px,
 
-                                            ${
-                                                y *
-                                                strength
-                                            }px,
+                                            ${y *
+                                        strength
+                                        }px,
 
                                             0
 
@@ -1238,12 +1236,12 @@
     // CURSOR GLOW
     // =========================================================
 
-    function initCursorGlow(){
+    function initCursorGlow() {
 
-        if(
+        if (
             !hasFinePointer ||
             prefersReducedMotion
-        ){
+        ) {
 
             return;
 
@@ -1281,7 +1279,7 @@
             mouseY;
 
 
-        function animate(){
+        function animate() {
 
             currentX +=
                 (
@@ -1329,7 +1327,7 @@
 
             },
             {
-                passive:true
+                passive: true
             }
         );
 
@@ -1366,13 +1364,13 @@
     // VIDEOS
     // =========================================================
 
-    function initVideos(){
+    function initVideos() {
 
         const videos =
             $$("video");
 
 
-        if(!videos.length){
+        if (!videos.length) {
 
             return;
 
@@ -1393,9 +1391,9 @@
         );
 
 
-        if(
+        if (
             !("IntersectionObserver" in window)
-        ){
+        ) {
 
             videos.forEach(
                 video => {
@@ -1403,7 +1401,7 @@
                     video
                         .play()
                         .catch(
-                            () => {}
+                            () => { }
                         );
 
                 }
@@ -1427,19 +1425,19 @@
                                 entry.target;
 
 
-                            if(
+                            if (
                                 entry.isIntersecting &&
                                 !document.hidden
-                            ){
+                            ) {
 
                                 video
                                     .play()
                                     .catch(
-                                        () => {}
+                                        () => { }
                                     );
 
                             }
-                            else{
+                            else {
 
                                 video.pause();
 
@@ -1451,7 +1449,7 @@
                 },
 
                 {
-                    threshold:.25
+                    threshold: .25
                 }
 
             );
@@ -1472,7 +1470,7 @@
             "visibilitychange",
             () => {
 
-                if(document.hidden){
+                if (document.hidden) {
 
                     videos.forEach(
                         video => {
@@ -1495,12 +1493,12 @@
     // MAGNETIC BUTTONS
     // =========================================================
 
-    function initMagneticButtons(){
+    function initMagneticButtons() {
 
-        if(
+        if (
             !hasFinePointer ||
             prefersReducedMotion
-        ){
+        ) {
 
             return;
 
@@ -1571,25 +1569,25 @@
     // NUMBER ANIMATION
     // =========================================================
 
-    function initNumberAnimation(){
+    function initNumberAnimation() {
 
         const numbers =
             $$("[data-number]");
 
 
-        if(
+        if (
             !numbers.length ||
             prefersReducedMotion
-        ){
+        ) {
 
             return;
 
         }
 
 
-        if(
+        if (
             !("IntersectionObserver" in window)
-        ){
+        ) {
 
             return;
 
@@ -1604,9 +1602,9 @@
                     entries.forEach(
                         entry => {
 
-                            if(
+                            if (
                                 !entry.isIntersecting
-                            ){
+                            ) {
 
                                 return;
 
@@ -1628,7 +1626,7 @@
                 },
 
                 {
-                    threshold:.6
+                    threshold: .6
                 }
 
             );
@@ -1648,7 +1646,7 @@
 
 
 
-    function animateNumber(element){
+    function animateNumber(element) {
 
         const target =
             Number(
@@ -1656,9 +1654,9 @@
             );
 
 
-        if(
+        if (
             Number.isNaN(target)
-        ){
+        ) {
 
             return;
 
@@ -1691,7 +1689,7 @@
 
         function animation(
             currentTime
-        ){
+        ) {
 
             const progress =
                 Math.min(
@@ -1730,7 +1728,7 @@
                 `${prefix}${current}${suffix}`;
 
 
-            if(progress < 1){
+            if (progress < 1) {
 
                 requestAnimationFrame(
                     animation
@@ -1753,9 +1751,9 @@
     // BACKGROUND PARALLAX
     // =========================================================
 
-    function initBackgroundParallax(){
+    function initBackgroundParallax() {
 
-        if(prefersReducedMotion){
+        if (prefersReducedMotion) {
 
             return;
 
@@ -1766,7 +1764,7 @@
             $(".bg-grid");
 
 
-        if(!background){
+        if (!background) {
 
             return;
 
@@ -1777,7 +1775,7 @@
             false;
 
 
-        function update(){
+        function update() {
 
             const y =
                 window.scrollY *
@@ -1798,7 +1796,7 @@
             "scroll",
             () => {
 
-                if(ticking){
+                if (ticking) {
 
                     return;
 
@@ -1815,7 +1813,7 @@
 
             },
             {
-                passive:true
+                passive: true
             }
         );
 
@@ -1827,7 +1825,7 @@
     // EXTERNAL LINKS
     // =========================================================
 
-    function initExternalLinks(){
+    function initExternalLinks() {
 
         $$(
             'a[target="_blank"]'
@@ -1845,9 +1843,9 @@
                             ""
                         )
 
-                        .split(/\s+/)
+                            .split(/\s+/)
 
-                        .filter(Boolean)
+                            .filter(Boolean)
 
                     );
 
@@ -1883,7 +1881,7 @@
     // IMAGES
     // =========================================================
 
-    function initImages(){
+    function initImages() {
 
         $$("img").forEach(
             image => {
@@ -1902,7 +1900,7 @@
     // INITIALIZE
     // =========================================================
 
-    function init(){
+    function init() {
 
         initReveal();
 
@@ -1944,10 +1942,10 @@
     // START
     // =========================================================
 
-    if(
+    if (
         document.readyState ===
         "loading"
-    ){
+    ) {
 
         document.addEventListener(
 
@@ -1956,13 +1954,13 @@
             init,
 
             {
-                once:true
+                once: true
             }
 
         );
 
     }
-    else{
+    else {
 
         init();
 
